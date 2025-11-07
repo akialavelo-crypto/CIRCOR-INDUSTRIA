@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIRCOR Industria – QCM Visite du site</title>
+  <style>
+    :root { --brand:#2563eb; --ink:#0b132b; --muted:#6b7280; --bg:#f5f7fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; background: var(--bg); color: var(--ink); }
+    header { background:white; border-bottom:1px solid #e5e7eb; padding:20px 16px; position:sticky; top:0; z-index:10; }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .logo { width:42px; height:42px; border-radius:10px; background: linear-gradient(135deg, var(--brand), #0bd); display:flex; align-items:center; justify-content:center; color:white; font-weight:700; }
+    h1 { font-size: clamp(20px, 3vw, 28px); margin:0; }
+    .subtitle { color: var(--muted); margin-top:4px; }
+    main { padding: 24px 0 84px; }
+    .card { background:white; border:1px solid #e5e7eb; border-radius:16px; padding: 18px; margin-bottom:16px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .question h3 { margin: 0 0 10px; font-size: 18px; }
+    .choices { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:10px; }
+    .choice { border:1px solid #e5e7eb; border-radius:12px; padding:10px; display:flex; align-items:center; gap:8px; cursor:pointer; background:#fff; transition: border-color .15s, box-shadow .15s; }
+    .choice:hover { border-color:#cbd5e1; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; }
+    button, .btn { border:none; border-radius:12px; padding:12px 16px; font-weight:600; cursor:pointer; }
+    .primary { background: var(--ink); color:white; }
+    .secondary { background:white; color:var(--ink); border:1px solid #e5e7eb; }
+    footer { position:fixed; bottom:0; left:0; right:0; background: white; border-top:1px solid #e5e7eb; padding:12px 16px; }
+    .note { color: var(--muted); font-size: 14px; }
+    .hidden { display:none; }
+    .success { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; padding:14px; border-radius:12px; }
+    .muted-box { background:#f9fafb; border:1px dashed #e5e7eb; padding:10px; border-radius:12px; }
+    .field { margin: 8px 0; }
+    textarea, select, input[type='text'] { width:100%; padding:10px; border:1px solid #e5e7eb; border-radius:12px; resize:vertical; font-family:inherit; }
+    details { border-radius:12px; }
+    summary { cursor:pointer; }
+    .req { color:#ef4444; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div class="logo" aria-hidden="true">CI</div>
+      <div>
+        <h1>CIRCOR Industria — QCM Visite du site</h1>
+        <div class="subtitle">Merci de répondre à ces questions (durée 2–3 min). Vos réponses sont anonymes.</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="qcmForm">
+      <div class="card muted-box">
+        <strong>Échelle de réponse :</strong> Oui, parfaitement — Oui, moyennement — Pas assez — Absolument pas
+      </div>
+
+      <!-- Questions 1 à 9 (choix multiples) -->
+      <div class="card question">
+        <h3>1) Avez-vous trouvé la présentation du site claire et bien structurée ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q1">
+          <label class="choice"><input required type="radio" name="Q1" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q1" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q1" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q1" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>2) Les informations données pendant la visite étaient-elles suffisantes ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q2">
+          <label class="choice"><input required type="radio" name="Q2" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q2" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q2" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q2" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>3) Avez-vous trouver la durée de la visite adaptée ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q3">
+          <label class="choice"><input required type="radio" name="Q3" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q3" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q3" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q3" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>4) Avez-vous perçu clairement le potentiel de notre nouveau site de production ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q4">
+          <label class="choice"><input required type="radio" name="Q4" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q4" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q4" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q4" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>5) Les aspects sécurité du site vous ont-ils semblé bien expliqués et mis en valeur ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q5">
+          <label class="choice"><input required type="radio" name="Q5" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q5" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q5" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q5" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>6) Pensez-vous que la visite a répondu à vos attentes initiales ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q6">
+          <label class="choice"><input required type="radio" name="Q6" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q6" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q6" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q6" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>7) Les conditions de travail (ergonomie, sécurité, …) vous paraissent-elles satisfaisantes ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q7">
+          <label class="choice"><input required type="radio" name="Q7" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q7" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q7" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q7" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>8) Pensez-vous que ce site favorisera la collaboration entre les équipes ? Entre services ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q8">
+          <label class="choice"><input required type="radio" name="Q8" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q8" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q8" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q8" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <div class="card question">
+        <h3>9) Recommanderiez-vous cette visite à d’autres collègues ? <span class="req">*</span></h3>
+        <div class="choices" role="group" aria-label="Q9">
+          <label class="choice"><input required type="radio" name="Q9" value="Oui, parfaitement"> Oui, parfaitement</label>
+          <label class="choice"><input type="radio" name="Q9" value="Oui, moyennement"> Oui, moyennement</label>
+          <label class="choice"><input type="radio" name="Q9" value="Pas assez"> Pas assez</label>
+          <label class="choice"><input type="radio" name="Q9" value="Absolument pas"> Absolument pas</label>
+        </div>
+      </div>
+
+      <!-- Q10: libre -->
+      <div class="card">
+        <div class="field">
+          <label for="Q10"><strong>10) Avez-vous des suggestions / remarques ?</strong> (facultatif)</label>
+          <textarea id="Q10" name="Q10" placeholder="Vos idées d’amélioration, impressions, points à éclaircir…"></textarea>
+        </div>
+      </div>
+
+      <!-- Q11: service -->
+      <div class="card">
+        <div class="field">
+          <label for="service"><strong>11) De quel service faites-vous partie ?</strong> <span class="req">*</span></label>
+          <select id="service" name="Service" required>
+            <option value="" selected disabled>— Sélectionnez votre service —</option>
+            <option>Production</option>
+            <option>Maintenance</option>
+            <option>Qualité</option>
+            <option>Méthodes / Industrialisation</option>
+            <option>Logistique</option>
+            <option>R&amp;D</option>
+            <option>HSE</option>
+            <option>RH</option>
+            <option>Finance</option>
+            <option>IT</option>
+            <option>Commercial</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field hidden" id="serviceAutreWrap">
+          <label for="serviceAutre"><strong>Précisez votre service :</strong></label>
+          <input id="serviceAutre" name="Service (autre)" type="text" placeholder="Votre service">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="primary" type="submit">Envoyer mes réponses</button>
+        <button class="secondary" type="button" id="downloadCsv">Télécharger toutes les réponses (CSV)</button>
+      </div>
+      <p class="note">Astuce : vous pouvez aussi configurer un point de collecte centralisé (Google Apps Script / webhook). Voir ci-dessous.</p>
+
+      <div class="card hidden" id="success">
+        <div class="success"><strong>Merci !</strong> Votre réponse a bien été enregistrée sur cet appareil. Vous pouvez fermer cette page.</div>
+      </div>
+
+      <div class="card">
+        <details>
+          <summary><strong>⚙️ Paramètres d’envoi (optionnels)</strong> — pour envoyer chaque réponse vers une URL (Google Apps Script, webhook, etc.)</summary>
+          <div class="field">
+            <label for="endpoint"><strong>ENDPOINT_URL</strong> (laisser vide pour désactiver l’envoi)</label>
+            <input id="endpoint" placeholder="https://script.google.com/macros/s/XXX/exec">
+          </div>
+          <div class="note">Format d’envoi : <code>POST application/json</code> avec toutes les paires <em>Question → Réponse</em>, horodatage, service et un identifiant de session.</div>
+        </details>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;">
+      <div class="note">© 2025 CIRCOR Industria • Questionnaire de visite</div>
+      <div class="note">Besoin d’aide ? Collez un ENDPOINT ci-dessus ou utilisez le bouton CSV.</div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('qcmForm');
+    const dlBtn = document.getElementById('downloadCsv');
+    const success = document.getElementById('success');
+    const endpointInput = document.getElementById('endpoint');
+    const service = document.getElementById('service');
+    const serviceAutreWrap = document.getElementById('serviceAutreWrap');
+    const serviceAutre = document.getElementById('serviceAutre');
+
+    service.addEventListener('change', () => {
+      const isOther = service.value === 'Autre';
+      serviceAutreWrap.classList.toggle('hidden', !isOther);
+      serviceAutre.required = isOther;
+      if (isOther) serviceAutre.focus();
+      else serviceAutre.value = '';
+    });
+
+    function formDataToObject(formEl) {
+      const data = new FormData(formEl);
+      const obj = {
+        session_id: (crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Math.random()).slice(2),
+        timestamp: new Date().toISOString(),
+      };
+      for (const [k,v] of data.entries()) obj[k] = v;
+      // Normalize Service value if 'Autre'
+      if (obj['Service'] === 'Autre' && obj['Service (autre)']) {
+        obj['Service'] = obj['Service (autre)'];
+        delete obj['Service (autre)'];
+      }
+      return obj;
+    }
+
+    async function sendToEndpoint(url, payload) {
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        return res.ok;
+      } catch (e) {
+        console.warn('Envoi échoué:', e);
+        return false;
+      }
+    }
+
+    const STORAGE_KEY = 'circor-qcm-responses';
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Simple custom validation for required radio groups
+      const requiredGroups = ['Q1','Q2','Q3','Q4','Q5','Q6','Q7','Q8','Q9'];
+      for (const g of requiredGroups) {
+        if (!form.querySelector(`input[name=\"${g}\"]:checked`)) {
+          alert('Merci de répondre à toutes les questions obligatoires.');
+          return;
+        }
+      }
+      if (!service.value) {
+        alert('Merci d’indiquer votre service (Q11).');
+        return;
+      }
+      if (service.value === 'Autre' && !serviceAutre.value.trim()) {
+        alert('Merci de préciser votre service.');
+        return;
+      }
+
+      const obj = formDataToObject(form);
+      // Optional remote send
+      const endpoint = endpointInput.value.trim();
+      if (endpoint) { await sendToEndpoint(endpoint, obj); }
+
+      // Local store
+      const all = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      all.push(obj);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(all));
+
+      success.classList.remove('hidden');
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      form.querySelector('button[type=\"submit\"]').disabled = true;
+    });
+
+    dlBtn.addEventListener('click', () => {
+      const all = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      if (!all.length) {
+        alert(\"Aucune réponse stockée sur cet appareil pour le moment. Soumettez d'abord le formulaire.\");
+        return;
+      }
+      // Unified headers
+      const headers = Array.from(all.reduce((set, row) => {
+        Object.keys(row).forEach(k => set.add(k));
+        return set;
+      }, new Set())).sort();
+      const rows = [headers.join(',')];
+      for (const row of all) {
+        const vals = headers.map(h => (row[h] ?? '').toString().replaceAll('\"','\"\"'));
+        rows.push(vals.map(v => `\"${v}\"`).join(','));
+      }
+      const blob = new Blob([rows.join('\\n') + '\\n'], { type:'text/csv;charset=utf-8;' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      const ts = new Date().toISOString().replaceAll(':','-');
+      a.download = `circor-qcm-responses-${ts}.csv`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+  </script>
+</body>
+</html>
