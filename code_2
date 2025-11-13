@@ -1,0 +1,153 @@
+<form id="qcmForm">
+  <div class="card muted-box">
+    <strong>Merci de répondre à ces 10 questions</strong> (durée estimée : 2–3 min). Vos réponses sont anonymes.
+  </div>
+
+  <!-- Q1 : Service -->
+  <div class="card question">
+    <h3>1) Dans quel service travaillez-vous ? <span class="req">*</span></h3>
+    <div class="field">
+      <label for="service">Service principal</label>
+      <select id="service" name="Service" required>
+        <option value="" selected disabled>— Sélectionnez votre service —</option>
+        <option>Usinage</option>
+        <option>Montage</option>
+
+        <option>Maintenance</option>
+        <option>Qualité</option>
+        <option>Méthodes / Industrialisation</option>
+        <option>Supply Chain</option> <!-- anciennement Logistique -->
+        <option>R&amp;D</option>
+        <option>Labo</option>
+        <option>HSE</option>
+        <option>RH</option>
+        <option>Finance</option>
+        <option>IT</option>
+        <option>Commercial</option>
+        <option>Programme</option>
+        <option>SAV</option>
+        <option>Autre</option>
+      </select>
+    </div>
+    <div class="field hidden" id="serviceAutreWrap">
+      <label for="serviceAutre"><strong>Précisez votre service :</strong></label>
+      <input id="serviceAutre" name="Service (autre)" type="text"
+             placeholder="Ex. Usinage, Montage, Laboratoire X, Supply Chain, Programme, SAV…">
+    </div>
+    <p class="note">
+      Pour la Production, vous pouvez préciser usinage vs montage. Pour la R&amp;D, préciser le laboratoire.
+    </p>
+  </div>
+
+  <!-- Q2 : Impression générale -->
+  <div class="card question">
+    <h3>2) Quelle est votre impression générale à la suite de la visite du nouveau bâtiment ? <span class="req">*</span></h3>
+    <div class="choices" role="group" aria-label="Q2">
+      <label class="choice"><input required type="radio" name="Q2" value="Très positive"> Très positive</label>
+      <label class="choice"><input type="radio" name="Q2" value="Plutôt positive"> Plutôt positive</label>
+      <label class="choice"><input type="radio" name="Q2" value="Mitigée"> Mitigée</label>
+      <label class="choice"><input type="radio" name="Q2" value="Plutôt négative"> Plutôt négative</label>
+      <label class="choice"><input type="radio" name="Q2" value="Très négative"> Très négative</label>
+    </div>
+  </div>
+
+  <!-- Q3 : Ce qui a été le plus apprécié -->
+  <div class="card">
+    <div class="field">
+      <label for="Q3"><strong>3) Qu’avez-vous le plus apprécié lors de cette visite ?</strong> (réponse libre)</label>
+      <textarea id="Q3" name="Q3" placeholder="Exemples : qualité des explications, découverte des ateliers, espaces communs…"></textarea>
+    </div>
+  </div>
+
+  <!-- Q4 : Sujets manquants / interrogations -->
+  <div class="card">
+    <div class="field">
+      <label for="Q4"><strong>4) Suite à la visite, y a-t-il des sujets que vous auriez souhaité aborder ou des points qui suscitent des interrogations ou des inquiétudes ?</strong> (réponse libre)</label>
+      <textarea id="Q4" name="Q4" placeholder="Vos questions, préoccupations, thèmes à approfondir…"></textarea>
+    </div>
+  </div>
+
+  <!-- Q5 : Zones de travail -->
+  <div class="card question">
+    <h3>5) Les zones de travail vous semblent-elles adaptées à vos besoins ? <span class="req">*</span></h3>
+    <div class="choices" role="group" aria-label="Q5">
+      <label class="choice"><input required type="radio" name="Q5" value="Tout à fait"> Tout à fait</label>
+      <label class="choice"><input type="radio" name="Q5" value="Plutôt oui"> Plutôt oui</label>
+      <label class="choice"><input type="radio" name="Q5" value="Plutôt non"> Plutôt non</label>
+      <label class="choice"><input type="radio" name="Q5" value="Pas du tout"> Pas du tout</label>
+    </div>
+  </div>
+
+  <!-- Q6 : Espaces communs -->
+  <div class="card question">
+    <h3>6) Les espaces communs (Agora, cafétéria, zones de détente, terrasse, etc.) répondent-ils à vos attentes ? <span class="req">*</span></h3>
+    <div class="choices" role="group" aria-label="Q6">
+      <label class="choice"><input required type="radio" name="Q6" value="Tout à fait"> Tout à fait</label>
+      <label class="choice"><input type="radio" name="Q6" value="Plutôt oui"> Plutôt oui</label>
+      <label class="choice"><input type="radio" name="Q6" value="Plutôt non"> Plutôt non</label>
+      <label class="choice"><input type="radio" name="Q6" value="Pas du tout"> Pas du tout</label>
+    </div>
+  </div>
+
+  <!-- Q7 : Collaboration -->
+  <div class="card question">
+    <h3>7) Pensez-vous que le nouveau site favorisera la collaboration entre les équipes et entre les services (disposition des bureaux, salles de réunion, etc.) ? <span class="req">*</span></h3>
+    <div class="choices" role="group" aria-label="Q7">
+      <label class="choice"><input required type="radio" name="Q7" value="Oui, tout à fait"> Oui, tout à fait</label>
+      <label class="choice"><input type="radio" name="Q7" value="Plutôt oui"> Plutôt oui</label>
+      <label class="choice"><input type="radio" name="Q7" value="Plutôt non"> Plutôt non</label>
+      <label class="choice"><input type="radio" name="Q7" value="Pas du tout"> Pas du tout</label>
+    </div>
+  </div>
+
+  <!-- Q8 : Pertinence / utilité de la visite -->
+  <div class="card question">
+    <h3>8) Avez-vous trouvé la visite du nouveau bâtiment pertinente et utile ? <span class="req">*</span></h3>
+    <div class="choices" role="group" aria-label="Q8">
+      <label class="choice"><input required type="radio" name="Q8" value="Oui, tout à fait"> Oui, tout à fait</label>
+      <label class="choice"><input type="radio" name="Q8" value="Plutôt oui"> Plutôt oui</label>
+      <label class="choice"><input type="radio" name="Q8" value="Plutôt non"> Plutôt non</label>
+      <label class="choice"><input type="radio" name="Q8" value="Pas du tout"> Pas du tout</label>
+    </div>
+  </div>
+
+  <!-- Q9 : Recommandation -->
+  <div class="card question">
+    <h3>9) Recommanderiez-vous cette visite à d’autres collègues ? <span class="req">*</span></h3>
+    <div class="choices" role="group" aria-label="Q9">
+      <label class="choice"><input required type="radio" name="Q9" value="Oui"> Oui</label>
+      <label class="choice"><input type="radio" name="Q9" value="Non"> Non</label>
+      <label class="choice"><input type="radio" name="Q9" value="Peut-être"> Peut-être</label>
+    </div>
+  </div>
+
+  <!-- Q10 : Remarques libres -->
+  <div class="card">
+    <div class="field">
+      <label for="Q10"><strong>10) Souhaitez-vous partager d’autres remarques, idées ou suggestions ?</strong> (réponse libre)</label>
+      <textarea id="Q10" name="Q10" placeholder="Toute autre remarque ou suggestion…"></textarea>
+    </div>
+  </div>
+
+  <!-- Boutons + paramètre ENDPOINT -->
+  <div class="actions">
+    <button class="primary" type="submit">Envoyer mes réponses</button>
+    <button class="secondary" type="button" id="downloadCsv">Télécharger toutes les réponses (CSV)</button>
+  </div>
+  <p class="note">Astuce : vous pouvez aussi configurer un point de collecte centralisé (Google Apps Script / webhook). Voir ci-dessous.</p>
+
+  <div class="card hidden" id="success">
+    <div class="success"><strong>Merci !</strong> Votre réponse a bien été enregistrée sur cet appareil. Vous pouvez fermer cette page.</div>
+  </div>
+
+  <div class="card">
+    <details>
+      <summary><strong>⚙️ Paramètres d’envoi (optionnels)</strong> — pour envoyer chaque réponse vers une URL (Google Apps Script, webhook, etc.)</summary>
+      <div class="field">
+        <label for="endpoint"><strong>ENDPOINT_URL</strong> (laisser vide pour désactiver l’envoi)</label>
+        <input id="endpoint" placeholder="https://script.google.com/macros/s/XXX/exec">
+      </div>
+      <div class="note">Format d’envoi : <code>POST application/json</code> avec toutes les paires <em>Question → Réponse</em>, horodatage, service et un identifiant de session.</div>
+    </details>
+  </div>
+</form>
